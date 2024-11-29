@@ -85,19 +85,19 @@ class Ui_Student_data(object):
 
         self.horizontalLayout_2.addWidget(self.job_cbx)
 
-        self.widget = QWidget(Student_data)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(10, 240, 331, 41))
-        self.horizontalLayout_5 = QHBoxLayout(self.widget)
+        self.layoutWidget2 = QWidget(Student_data)
+        self.layoutWidget2.setObjectName(u"layoutWidget2")
+        self.layoutWidget2.setGeometry(QRect(10, 240, 331, 41))
+        self.horizontalLayout_5 = QHBoxLayout(self.layoutWidget2)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.horizontalLayout_5.setContentsMargins(0, 0, 0, 0)
-        self.activity_lbl = QLabel(self.widget)
+        self.activity_lbl = QLabel(self.layoutWidget2)
         self.activity_lbl.setObjectName(u"activity_lbl")
         self.activity_lbl.setStyleSheet(u"font-size: 20px;")
 
         self.horizontalLayout_5.addWidget(self.activity_lbl)
 
-        self.activity_cbx = QComboBox(self.widget)
+        self.activity_cbx = QComboBox(self.layoutWidget2)
         self.activity_cbx.addItem("")
         self.activity_cbx.addItem("")
         self.activity_cbx.setObjectName(u"activity_cbx")
@@ -107,19 +107,19 @@ class Ui_Student_data(object):
 
         self.horizontalLayout_5.addWidget(self.activity_cbx)
 
-        self.widget1 = QWidget(Student_data)
-        self.widget1.setObjectName(u"widget1")
-        self.widget1.setGeometry(QRect(10, 100, 489, 32))
-        self.horizontalLayout_3 = QHBoxLayout(self.widget1)
+        self.layoutWidget3 = QWidget(Student_data)
+        self.layoutWidget3.setObjectName(u"layoutWidget3")
+        self.layoutWidget3.setGeometry(QRect(10, 100, 489, 32))
+        self.horizontalLayout_3 = QHBoxLayout(self.layoutWidget3)
         self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.hours_lbl = QLabel(self.widget1)
+        self.hours_lbl = QLabel(self.layoutWidget3)
         self.hours_lbl.setObjectName(u"hours_lbl")
         self.hours_lbl.setStyleSheet(u"font-size: 20px;")
 
         self.horizontalLayout_3.addWidget(self.hours_lbl)
 
-        self.hours_tbx = QLineEdit(self.widget1)
+        self.hours_tbx = QLineEdit(self.layoutWidget3)
         self.hours_tbx.setObjectName(u"hours_tbx")
         sizePolicy2 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         sizePolicy2.setHorizontalStretch(0)
@@ -131,19 +131,19 @@ class Ui_Student_data(object):
 
         self.horizontalLayout_3.addWidget(self.hours_tbx)
 
-        self.widget2 = QWidget(Student_data)
-        self.widget2.setObjectName(u"widget2")
-        self.widget2.setGeometry(QRect(10, 290, 221, 29))
-        self.horizontalLayout_6 = QHBoxLayout(self.widget2)
+        self.layoutWidget4 = QWidget(Student_data)
+        self.layoutWidget4.setObjectName(u"layoutWidget4")
+        self.layoutWidget4.setGeometry(QRect(10, 290, 221, 29))
+        self.horizontalLayout_6 = QHBoxLayout(self.layoutWidget4)
         self.horizontalLayout_6.setObjectName(u"horizontalLayout_6")
         self.horizontalLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.skips_lbl = QLabel(self.widget2)
+        self.skips_lbl = QLabel(self.layoutWidget4)
         self.skips_lbl.setObjectName(u"skips_lbl")
         self.skips_lbl.setStyleSheet(u"font-size: 20px;")
 
         self.horizontalLayout_6.addWidget(self.skips_lbl)
 
-        self.skips_tbx = QLineEdit(self.widget2)
+        self.skips_tbx = QLineEdit(self.layoutWidget4)
         self.skips_tbx.setObjectName(u"skips_tbx")
         sizePolicy2.setHeightForWidth(self.skips_tbx.sizePolicy().hasHeightForWidth())
         self.skips_tbx.setSizePolicy(sizePolicy2)
@@ -152,19 +152,21 @@ class Ui_Student_data(object):
 
         self.horizontalLayout_6.addWidget(self.skips_tbx)
 
-        self.widget3 = QWidget(Student_data)
-        self.widget3.setObjectName(u"widget3")
-        self.widget3.setGeometry(QRect(10, 140, 381, 41))
-        self.horizontalLayout_4 = QHBoxLayout(self.widget3)
+        self.layoutWidget5 = QWidget(Student_data)
+        self.layoutWidget5.setObjectName(u"layoutWidget5")
+        self.layoutWidget5.setGeometry(QRect(10, 140, 401, 41))
+        self.horizontalLayout_4 = QHBoxLayout(self.layoutWidget5)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
-        self.prof_lbl = QLabel(self.widget3)
+        self.prof_lbl = QLabel(self.layoutWidget5)
         self.prof_lbl.setObjectName(u"prof_lbl")
         self.prof_lbl.setStyleSheet(u"font-size: 20px;")
 
         self.horizontalLayout_4.addWidget(self.prof_lbl)
 
-        self.prof_cbx = QComboBox(self.widget3)
+        self.prof_cbx = QComboBox(self.layoutWidget5)
+        self.prof_cbx.addItem("")
+        self.prof_cbx.addItem("")
         self.prof_cbx.addItem("")
         self.prof_cbx.addItem("")
         self.prof_cbx.addItem("")
@@ -228,6 +230,8 @@ class Ui_Student_data(object):
         self.prof_cbx.setItemText(12, QCoreApplication.translate("Student_data", u"\u0414\u0438\u0437\u0430\u0439\u043d\u0435\u0440", None))
         self.prof_cbx.setItemText(13, QCoreApplication.translate("Student_data", u"\u0423\u0447\u0451\u043d\u044b\u0439", None))
         self.prof_cbx.setItemText(14, QCoreApplication.translate("Student_data", u"\u041f\u0438\u0441\u0430\u0442\u0435\u043b\u044c", None))
+        self.prof_cbx.setItemText(15, QCoreApplication.translate("Student_data", u"\u0418\u043d\u0436\u0435\u043d\u0435\u0440-\u0441\u0442\u0440\u043e\u0438\u0442\u0435\u043b\u044c", None))
+        self.prof_cbx.setItemText(16, QCoreApplication.translate("Student_data", u"\u0418\u043d\u0432\u0435\u0441\u0442\u043e\u0440", None))
 
     # retranslateUi
 

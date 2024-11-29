@@ -61,8 +61,8 @@ class Ui_Settings(object):
 
 
         self.retranslateUi(Settings)
-        self.buttonBox.accepted.connect(Settings.accepted) #accept
-        self.buttonBox.rejected.connect(Settings.rect) #reject
+        self.buttonBox.accepted.connect(Settings.accept) #accept
+        self.buttonBox.rejected.connect(Settings.reject) #reject
 
         QMetaObject.connectSlotsByName(Settings)
     # setupUi

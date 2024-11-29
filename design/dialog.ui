@@ -137,7 +137,7 @@ font-size: 15px;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -182,7 +182,7 @@ font-size: 15px;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -218,7 +218,7 @@ font-size: 16px;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
@@ -254,12 +254,12 @@ font-size: 16px;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>140</y>
-     <width>381</width>
+     <width>401</width>
      <height>41</height>
     </rect>
    </property>
@@ -358,6 +358,16 @@ font-size: 16px;</string>
       <item>
        <property name="text">
         <string>Писатель</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Инженер-строитель</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Инвестор</string>
        </property>
       </item>
      </widget>
