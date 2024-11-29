@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Student_data</class>
+ <widget class="QDialog" name="Student_data">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>510</width>
+    <height>391</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>360</y>
+     <width>161</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Orientation::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Ok</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="data_title_lbl">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>221</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size: 25px;
+font-weight: 500;</string>
+   </property>
+   <property name="text">
+    <string>Данные о студенте</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>51</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="label">
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Пол:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="gender_cbx">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">text-align: center;
+font-size: 15px;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>М</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ж</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>190</y>
+     <width>201</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QLabel" name="job_lbl">
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Подработка:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="job_cbx">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 15px;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Нет</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Есть</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>240</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_5">
+    <item>
+     <widget class="QLabel" name="activity_lbl">
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Внеурочная деятельность: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="activity_cbx">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 15px;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Нет</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Есть</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>100</y>
+     <width>489</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QLabel" name="hours_lbl">
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Среднее число самообучения в неделю: </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="hours_tbx">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-weight: 400;
+font-size: 16px;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>290</y>
+     <width>221</width>
+     <height>29</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_6">
+    <item>
+     <widget class="QLabel" name="skips_lbl">
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Пропуски:        </string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="skips_tbx">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-weight: 400;
+font-size: 16px;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item>
+     <widget class="QLabel" name="prof_lbl">
+      <property name="styleSheet">
+       <string notr="true">font-size: 20px;</string>
+      </property>
+      <property name="text">
+       <string>Карьерное стремление:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="prof_cbx">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font-size: 15px;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Инженер ПО</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Владелец бизнеса</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Неизвестно</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Банкир</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Юрист</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Бухгалтер</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Доктор</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Застройщик</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Художник</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Разработчик игр</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Гос служащий</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Преподаватель</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Дизайнер</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Учёный</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Писатель</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>Student_data</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>Student_data</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
