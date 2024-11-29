@@ -70,14 +70,14 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout.addWidget(self.predict_btn)
 
-        self.add_data_btn_3 = QPushButton(self.layoutWidget)
-        self.add_data_btn_3.setObjectName(u"add_data_btn_3")
-        sizePolicy.setHeightForWidth(self.add_data_btn_3.sizePolicy().hasHeightForWidth())
-        self.add_data_btn_3.setSizePolicy(sizePolicy)
-        self.add_data_btn_3.setStyleSheet(u"font-size: 20px;\n"
+        self.features_btn = QPushButton(self.layoutWidget)
+        self.features_btn.setObjectName(u"features_btn")
+        sizePolicy.setHeightForWidth(self.features_btn.sizePolicy().hasHeightForWidth())
+        self.features_btn.setSizePolicy(sizePolicy)
+        self.features_btn.setStyleSheet(u"font-size: 20px;\n"
 "font-weight: 500;")
 
-        self.horizontalLayout.addWidget(self.add_data_btn_3)
+        self.horizontalLayout.addWidget(self.features_btn)
 
         self.layoutWidget1 = QWidget(self.centralwidget)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
@@ -117,7 +117,7 @@ class Ui_MainWindow(object):
         self.title.setText(QCoreApplication.translate("MainWindow", u"\u041c\u043e\u0434\u0443\u043b\u044c \u043f\u0440\u043e\u0433\u043d\u043e\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f", None))
         self.add_data_btn.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0432\u0435\u0441\u0442\u0438 \u0434\u0430\u043d\u043d\u044b\u0435", None))
         self.predict_btn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0434\u0435\u043b\u0430\u0442\u044c \u043f\u0440\u043e\u0433\u043d\u043e\u0437", None))
-        self.add_data_btn_3.setText(QCoreApplication.translate("MainWindow", u"\u0425\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438", None))
+        self.features_btn.setText(QCoreApplication.translate("MainWindow", u"\u0425\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442:", None))
     # retranslateUi
 
