@@ -3,6 +3,7 @@ from ui_compiled.settings_dialog import Ui_Settings
 from ui_compiled.student_dialog import Ui_Student_data
 
 from PySide6.QtWidgets import QMainWindow, QDialog, QDialogButtonBox
+from PySide6.QtGui import QPixmap
 
 from student_data import StudentData
 from neural_model import NeuralModel
@@ -19,6 +20,7 @@ class StudentPredict(QMainWindow):
         self.ui.add_data_btn.clicked.connect(self.open_student_data_window)
         self.ui.settings_btn.clicked.connect(self.open_settings_window)
         self.ui.predict_btn.clicked.connect(self.get_predicted_value)
+        self.ui.features_btn.clicked.connect(self.show_plot)
 
     def open_student_data_window(self):
         self.data_window = DataWindow()
@@ -34,6 +36,16 @@ class StudentPredict(QMainWindow):
             model = NeuralModel(self.settings_window.get_data())
             print(model.predict_value(student_data.data))
             self.ui.result_tbx.setText(str(model.predict_value(student_data.data)).replace('[', '').replace(']', ''))
+
+    def show_plot(self):
+        if self.settings_window:
+            plot_file = NeuralModel(self.settings_window.get_data()).plot_file
+
+            if self.ui.plot_lbl.pixmap().isNull():
+                print("inside")
+                self.ui.plot_lbl.setPixmap(QPixmap(plot_file))
+            else:
+                self.ui.plot_lbl.clear()
 
 
 class Settings(QDialog):

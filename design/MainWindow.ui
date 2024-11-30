@@ -169,6 +169,22 @@ font-size: 20px;</string>
      </item>
     </layout>
    </widget>
+   <widget class="QLabel" name="plot_lbl">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>60</y>
+      <width>641</width>
+      <height>481</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>

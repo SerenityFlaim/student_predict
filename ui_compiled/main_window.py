@@ -104,6 +104,10 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.result_tbx)
 
+        self.plot_lbl = QLabel(self.centralwidget)
+        self.plot_lbl.setObjectName(u"plot_lbl")
+        self.plot_lbl.setEnabled(True)
+        self.plot_lbl.setGeometry(QRect(180, 60, 641, 481))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -119,5 +123,6 @@ class Ui_MainWindow(object):
         self.predict_btn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0434\u0435\u043b\u0430\u0442\u044c \u043f\u0440\u043e\u0433\u043d\u043e\u0437", None))
         self.features_btn.setText(QCoreApplication.translate("MainWindow", u"\u0425\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442:", None))
+        self.plot_lbl.setText("")
     # retranslateUi
 

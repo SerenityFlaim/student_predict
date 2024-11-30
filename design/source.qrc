@@ -3,4 +3,8 @@
     <file>images/settings.png</file>
     <file>images/gear.png</file>
   </qresource>
+  <qresource prefix="plots">
+    <file>images/sequential_scatter.png</file>
+    <file>images/xgb_scatter.png</file>
+  </qresource>
 </RCC>
