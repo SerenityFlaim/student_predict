@@ -92,17 +92,17 @@ class Ui_MainWindow(object):
 
         self.verticalLayout.addWidget(self.label)
 
-        self.lineEdit = QLineEdit(self.layoutWidget1)
-        self.lineEdit.setObjectName(u"lineEdit")
+        self.result_tbx = QLineEdit(self.layoutWidget1)
+        self.result_tbx.setObjectName(u"result_tbx")
         sizePolicy1 = QSizePolicy(QSizePolicy.Policy.Expanding, QSizePolicy.Policy.Expanding)
         sizePolicy1.setHorizontalStretch(0)
         sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.lineEdit.sizePolicy().hasHeightForWidth())
-        self.lineEdit.setSizePolicy(sizePolicy1)
-        self.lineEdit.setStyleSheet(u"font-weight: 400;\n"
+        sizePolicy1.setHeightForWidth(self.result_tbx.sizePolicy().hasHeightForWidth())
+        self.result_tbx.setSizePolicy(sizePolicy1)
+        self.result_tbx.setStyleSheet(u"font-weight: 400;\n"
 "font-size: 20px;")
 
-        self.verticalLayout.addWidget(self.lineEdit)
+        self.verticalLayout.addWidget(self.result_tbx)
 
         MainWindow.setCentralWidget(self.centralwidget)
 

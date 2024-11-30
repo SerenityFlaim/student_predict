@@ -8,7 +8,5 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     mw = StudentPredict()
     mw.show()
-    #dw = DataWindow()
-    #dw.show()
 
     sys.exit(app.exec())

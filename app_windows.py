@@ -4,24 +4,36 @@ from ui_compiled.student_dialog import Ui_Student_data
 
 from PySide6.QtWidgets import QMainWindow, QDialog, QDialogButtonBox
 
+from student_data import StudentData
+from neural_model import NeuralModel
+
 class StudentPredict(QMainWindow):
     def __init__(self):
         super(StudentPredict, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        
+        self.data_window = None
+        self.settings_window = None
 
         self.ui.add_data_btn.clicked.connect(self.open_student_data_window)
         self.ui.settings_btn.clicked.connect(self.open_settings_window)
+        self.ui.predict_btn.clicked.connect(self.get_predicted_value)
 
     def open_student_data_window(self):
-        data_window = DataWindow()
-        self.new_window = data_window
-        self.new_window.show()
+        self.data_window = DataWindow()
+        self.data_window.show()
 
     def open_settings_window(self):
-        settings_window = Settings()
-        self.new_window = settings_window
-        self.new_window.show()
+        self.settings_window = Settings()
+        self.settings_window.show()
+
+    def get_predicted_value(self):
+        if self.data_window and self.settings_window:
+            student_data = StudentData(self.data_window.get_data())
+            model = NeuralModel(self.settings_window.get_data())
+            print(model.predict_value(student_data.data))
+            self.ui.result_tbx.setText(str(model.predict_value(student_data.data)).replace('[', '').replace(']', ''))
 
 
 class Settings(QDialog):
