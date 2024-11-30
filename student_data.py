@@ -1,6 +1,8 @@
+import pandas as pd
+
 class StudentData():
     def __init__(self, data_array):
-        self.data = self.convert_data(data_array)
+        self.data = self.convert_to_frame(self.convert_data(data_array))
 
     def convert_data(self, data_array):
         result = []
@@ -35,7 +37,8 @@ class StudentData():
         result.append(int(data_array[1]))
         result.append(career_dict[data_array[2]])
         return result
-
-sd = StudentData(['М', '8', 'Инженер ПО', 'Нет', 'Нет', '5'])
-print(sd.data)
+    
+    def convert_to_frame(self, data_array):
+        return pd.DataFrame([data_array], columns=['gender', 'part_time_job', 'absence_days', 'extracurricular_activities',
+                                                 'weekly_self_study_hours', 'career_aspiration'])
 
