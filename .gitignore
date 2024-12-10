@@ -2,3 +2,4 @@ model_sequential.py
 model_xgb.py
 student-scores.csv
 __pycache__
+myenv

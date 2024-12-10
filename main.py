@@ -2,11 +2,13 @@ import sys
 
 from PySide6.QtWidgets import QApplication
 
-from app_windows import StudentPredict, DataWindow
+from app_windows import StudentPredict
 
-if __name__ == "__main__":
+def main():
     app = QApplication(sys.argv)
     mw = StudentPredict()
     mw.show()
-
     sys.exit(app.exec())
+
+if __name__ == "__main__":
+    main()

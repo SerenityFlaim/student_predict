@@ -34,7 +34,8 @@ class StudentData():
         result.append(job_act_dict[data_array[3]])
         result.append(int(data_array[5]))
         result.append(job_act_dict[data_array[4]])
-        result.append(int(data_array[1]))
+        #result.append(int(data_array[1]))
+        result.append(float(data_array[1]))
         result.append(career_dict[data_array[2]])
         return result
     

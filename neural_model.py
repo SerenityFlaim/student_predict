@@ -9,7 +9,6 @@ class NeuralModel():
         model_obj = self.create_model(model_name)
         self.model = model_obj.model
         self.plot_file = model_obj.plot_file
-        print(self.model)
 
     def predict_value(self, dataframe):
         return self.model.predict(dataframe)
