@@ -3,7 +3,6 @@ from keras._tf_keras.keras.losses import MeanSquaredError
 from xgboost import XGBRegressor
 
 
-
 class NeuralModel():
     def __init__(self, model_name):
         model_obj = self.create_model(model_name)
