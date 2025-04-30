@@ -32,6 +32,7 @@ class Ui_MainWindow(object):
         self.settings_btn = QPushButton(self.centralwidget)
         self.settings_btn.setObjectName(u"settings_btn")
         self.settings_btn.setGeometry(QRect(960, 530, 81, 81))
+        self.settings_btn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.settings_btn.setStyleSheet(u"background-color: linear-gradient(130deg, rgba(59,58,72,0.6646557548800771) 0%, rgba(67,61,57,0.9279610770089286) 42%, rgba(141,129,113,1) 71%);")
         icon = QIcon()
         icon.addFile(u":/images/images/settings.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
@@ -56,8 +57,17 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.add_data_btn.sizePolicy().hasHeightForWidth())
         self.add_data_btn.setSizePolicy(sizePolicy)
-        self.add_data_btn.setStyleSheet(u"font-size: 20px;\n"
-"font-weight: 500;")
+        self.add_data_btn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.add_data_btn.setStyleSheet(u"QPushButton#add_data_btn{\n"
+"	font-size: 18px;\n"
+"	color: rgb(0, 204, 255);	\n"
+"	border-radius: 12px;\n"
+"	background-color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover#add_data_btn{\n"
+"	background-color: rgb(230, 250, 255);\n"
+"}")
 
         self.horizontalLayout.addWidget(self.add_data_btn)
 
@@ -65,8 +75,17 @@ class Ui_MainWindow(object):
         self.predict_btn.setObjectName(u"predict_btn")
         sizePolicy.setHeightForWidth(self.predict_btn.sizePolicy().hasHeightForWidth())
         self.predict_btn.setSizePolicy(sizePolicy)
-        self.predict_btn.setStyleSheet(u"font-size: 20px;\n"
-"font-weight: 500;")
+        self.predict_btn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.predict_btn.setStyleSheet(u"QPushButton#predict_btn{\n"
+"	font-size: 18px;\n"
+"	color: rgb(0, 204, 255);	\n"
+"	border-radius: 12px;\n"
+"	background-color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover#predict_btn{\n"
+"	background-color: rgb(230, 250, 255);\n"
+"}")
 
         self.horizontalLayout.addWidget(self.predict_btn)
 
@@ -74,8 +93,17 @@ class Ui_MainWindow(object):
         self.features_btn.setObjectName(u"features_btn")
         sizePolicy.setHeightForWidth(self.features_btn.sizePolicy().hasHeightForWidth())
         self.features_btn.setSizePolicy(sizePolicy)
-        self.features_btn.setStyleSheet(u"font-size: 20px;\n"
-"font-weight: 500;")
+        self.features_btn.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.features_btn.setStyleSheet(u"QPushButton#features_btn{\n"
+"	font-size: 18px;\n"
+"	color: rgb(0, 204, 255);	\n"
+"	border-radius: 12px;\n"
+"	background-color: white;\n"
+"}\n"
+"\n"
+"QPushButton:hover#features_btn{\n"
+"	background-color: rgb(230, 250, 255);\n"
+"}")
 
         self.horizontalLayout.addWidget(self.features_btn)
 
@@ -118,7 +146,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.settings_btn.setText("")
-        self.title.setText(QCoreApplication.translate("MainWindow", u"\u041c\u043e\u0434\u0443\u043b\u044c \u043f\u0440\u043e\u0433\u043d\u043e\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u044f", None))
+        self.title.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0433\u043d\u043e\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435", None))
         self.add_data_btn.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0432\u0435\u0441\u0442\u0438 \u0434\u0430\u043d\u043d\u044b\u0435", None))
         self.predict_btn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0434\u0435\u043b\u0430\u0442\u044c \u043f\u0440\u043e\u0433\u043d\u043e\u0437", None))
         self.features_btn.setText(QCoreApplication.translate("MainWindow", u"\u0425\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438", None))

@@ -32,6 +32,9 @@
       <height>81</height>
      </rect>
     </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
     <property name="styleSheet">
      <string notr="true">background-color: linear-gradient(130deg, rgba(59,58,72,0.6646557548800771) 0%, rgba(67,61,57,0.9279610770089286) 42%, rgba(141,129,113,1) 71%);</string>
     </property>
@@ -63,7 +66,7 @@
 font-weight: 600;</string>
     </property>
     <property name="text">
-     <string>Модуль прогнозирования</string>
+     <string>Прогнозирование</string>
     </property>
    </widget>
    <widget class="QWidget" name="layoutWidget">
@@ -87,9 +90,20 @@ font-weight: 600;</string>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
-        <string notr="true">font-size: 20px;
-font-weight: 500;</string>
+        <string notr="true">QPushButton#add_data_btn{
+	font-size: 18px;
+	color: rgb(0, 204, 255);	
+	border-radius: 12px;
+	background-color: white;
+}
+
+QPushButton:hover#add_data_btn{
+	background-color: rgb(230, 250, 255);
+}</string>
        </property>
        <property name="text">
         <string>Ввести данные</string>
@@ -104,9 +118,20 @@ font-weight: 500;</string>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
-        <string notr="true">font-size: 20px;
-font-weight: 500;</string>
+        <string notr="true">QPushButton#predict_btn{
+	font-size: 18px;
+	color: rgb(0, 204, 255);	
+	border-radius: 12px;
+	background-color: white;
+}
+
+QPushButton:hover#predict_btn{
+	background-color: rgb(230, 250, 255);
+}</string>
        </property>
        <property name="text">
         <string>Сделать прогноз</string>
@@ -121,9 +146,20 @@ font-weight: 500;</string>
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
        <property name="styleSheet">
-        <string notr="true">font-size: 20px;
-font-weight: 500;</string>
+        <string notr="true">QPushButton#features_btn{
+	font-size: 18px;
+	color: rgb(0, 204, 255);	
+	border-radius: 12px;
+	background-color: white;
+}
+
+QPushButton:hover#features_btn{
+	background-color: rgb(230, 250, 255);
+}</string>
        </property>
        <property name="text">
         <string>Характеристики</string>
