@@ -11,6 +11,6 @@ class ClusterView(QDialog):
     def set_controller(self, controller):
         self.controller = controller
 
-        # self.ui.importDataButton.clicked.connect(self.controller.import_data)
+        self.ui.importDataButton.clicked.connect(self.controller.on_import_data)
         # self.ui.enterDataButton.clicked.connect(self.controller.enter_data)
         self.ui.analyzeButton.clicked.connect(self.controller.on_analyze)

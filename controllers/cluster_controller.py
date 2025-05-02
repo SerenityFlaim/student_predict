@@ -1,4 +1,4 @@
-
+from models.file_processor import FileProcessor
 
 class ClusterController:
     def __init__(self, view, results_controller):
@@ -8,6 +8,12 @@ class ClusterController:
 
     def show_view(self):
         self.view.show()
+
+    def on_import_data(self):
+        fp = FileProcessor()
+        fp.select_csv_file()
+        df = fp.csv_to_dataframe()
+        print(df)
 
     def on_analyze(self):
         self.results_controller.show_view()
