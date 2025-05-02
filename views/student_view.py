@@ -13,14 +13,6 @@ class StudentView(QDialog):
         self.ui.buttonBox.button(QDialogButtonBox.StandardButton.Ok).clicked.connect(self.presenter.on_ok)
 
     def get_inputs(self):
-        # return{
-        #     'gender': self.ui.gender_cbx.currentText(),
-        #     'hours': self.ui.hours_tbx.text(),
-        #     'profession': self.ui.prof_cbx.currentText(),
-        #     'job': self.ui.job_cbx.currentText(),
-        #     'activity': self.ui.activity_cbx.currentText(),
-        #     'skips': self.ui.skips_tbx.text()
-        # }
         return [
             self.ui.gender_cbx.currentText(),
             self.ui.hours_tbx.text(),

@@ -21,13 +21,8 @@ class PredictPresenter:
             ErrorHandler.create_error("Сначала введите данные и выберите настройки.")
             return
         data = self.student_presenter.data
-        print(data.to_string())
-        print(self.settings_presenter.model_name)
-        print("PASSED PRINT")
         model = NeuralModel(self.settings_presenter.model_name)
-        print(model)
         result = model.predict_value(data)
-        print("PASSED PREDICT")
         self.view.display_result(str(result).strip('[]'))
 
     def on_toggle_plot(self):

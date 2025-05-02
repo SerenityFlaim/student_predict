@@ -2,9 +2,9 @@ from PySide6.QtWidgets import QApplication
 from views.predict_view import PredictView
 from views.settings_view import SettingsView
 from views.student_view import StudentView
-from presenters.predict_presenter import PredictPresenter
-from presenters.settings_presenter import SettingsPresenter
-from presenters.student_presenter import StudentPresenter
+from controllers.predict_controller import PredictPresenter
+from controllers.settings_controller import SettingsPresenter
+from controllers.student_controller import StudentPresenter
 
 if __name__ == '__main__':
     app = QApplication([])

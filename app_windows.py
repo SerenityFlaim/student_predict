@@ -35,8 +35,6 @@ class StudentPredict(QMainWindow):
     def get_predicted_value(self):
         if self.data_window and self.settings_window:
             try:
-                print("GET DATA")
-                print(self.data_window.get_data())
                 if (not self.data_window.get_data()):
                     raise ValueError
                 student_data = StudentData(self.data_window.get_data())
@@ -89,10 +87,6 @@ class DataWindow(QDialog):
             result.append(self.ui.gender_cbx.currentText())
             result.append(self.er_handler.check_positive(self.ui.hours_tbx.text(), "Значение количества часов должно быть положительным."))
             result.append(self.ui.prof_cbx.currentText())
-            print(self.ui.prof_cbx.currentText())
-            print(str(self.ui.prof_cbx.currentText()).encode('utf-8').decode('utf-8'))
-            print(self.ui.prof_cbx.currentData())
-            print(type(self.ui.prof_cbx.currentText()))
             result.append(self.ui.job_cbx.currentText())
             result.append(self.ui.activity_cbx.currentText())
             result.append(self.er_handler.check_positive_integer(self.ui.skips_tbx.text(), "Значение количества пропусков должно быть целым положительным."))
