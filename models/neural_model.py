@@ -14,8 +14,10 @@ class NeuralModel():
 
     def create_model(self, model_name):
         if (model_name == "Sequential"):
+            print("Sequantial created")
             return SequentialModel()
         elif (model_name == "XGB"):
+            print("XGB created")
             return XgbModel()
         else:
             return None

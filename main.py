@@ -1,14 +1,20 @@
-import sys
-
 from PySide6.QtWidgets import QApplication
+from views.predict_view import PredictView
+from views.settings_view import SettingsView
+from views.student_view import StudentView
+from presenters.predict_presenter import PredictPresenter
+from presenters.settings_presenter import SettingsPresenter
+from presenters.student_presenter import StudentPresenter
 
-from app_windows import StudentPredict
+if __name__ == '__main__':
+    app = QApplication([])
+    main_view = PredictView()
+    settings_view = SettingsView()
+    student_view = StudentView()
 
-def main():
-    app = QApplication(sys.argv)
-    mw = StudentPredict()
-    mw.show()
-    sys.exit(app.exec())
+    settings_pres = SettingsPresenter(settings_view)
+    student_pres = StudentPresenter(student_view)
+    main_pres = PredictPresenter(main_view, student_pres, settings_pres)
 
-if __name__ == "__main__":
-    main()
+    main_view.show()
+    app.exec()

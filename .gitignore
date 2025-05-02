@@ -3,3 +3,4 @@ model_xgb.py
 student-scores.csv
 __pycache__
 myenv
+.venv

@@ -1,3 +1,4 @@
+import os
 from ui_compiled.main_window import Ui_MainWindow
 from ui_compiled.settings_dialog import Ui_Settings
 from ui_compiled.student_dialog import Ui_Student_data
@@ -5,9 +6,9 @@ from ui_compiled.student_dialog import Ui_Student_data
 from PySide6.QtWidgets import QMainWindow, QDialog, QDialogButtonBox
 from PySide6.QtGui import QPixmap
 
-from student_data import StudentData
-from neural_model import NeuralModel
-from error_handler import ErrorHandler
+from models.student_data import StudentData
+from models.neural_model import NeuralModel
+from models.error_handler import ErrorHandler
 
 class StudentPredict(QMainWindow):
     def __init__(self):
@@ -34,6 +35,8 @@ class StudentPredict(QMainWindow):
     def get_predicted_value(self):
         if self.data_window and self.settings_window:
             try:
+                print("GET DATA")
+                print(self.data_window.get_data())
                 if (not self.data_window.get_data()):
                     raise ValueError
                 student_data = StudentData(self.data_window.get_data())
@@ -86,10 +89,15 @@ class DataWindow(QDialog):
             result.append(self.ui.gender_cbx.currentText())
             result.append(self.er_handler.check_positive(self.ui.hours_tbx.text(), "Значение количества часов должно быть положительным."))
             result.append(self.ui.prof_cbx.currentText())
+            print(self.ui.prof_cbx.currentText())
+            print(str(self.ui.prof_cbx.currentText()).encode('utf-8').decode('utf-8'))
+            print(self.ui.prof_cbx.currentData())
+            print(type(self.ui.prof_cbx.currentText()))
             result.append(self.ui.job_cbx.currentText())
             result.append(self.ui.activity_cbx.currentText())
             result.append(self.er_handler.check_positive_integer(self.ui.skips_tbx.text(), "Значение количества пропусков должно быть целым положительным."))
             self.data = result
+            print(result)
         except ValueError:
             self.er_handler.msg_box.exec()
             self.data = []
