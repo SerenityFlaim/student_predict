@@ -1,10 +1,10 @@
 from models.student_data import StudentData
 from models.error_handler import ErrorHandler
 
-class StudentPresenter:
+class StudentController:
     def __init__(self, view):
         self.view = view
-        self.view.set_presenter(self)
+        self.view.set_controller(self)
         self.data = None
 
     def show_view(self):

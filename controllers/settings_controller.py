@@ -1,7 +1,7 @@
-class SettingsPresenter:
+class SettingsController:
     def __init__(self, view):
         self.view = view
-        self.view.set_presenter(self)
+        self.view.set_controller(self)
         self.model_name = None
 
     def show_view(self):

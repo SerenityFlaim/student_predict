@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Dialog</class>
- <widget class="QDialog" name="Dialog">
+ <class>ClusterResultsWindow</class>
+ <widget class="QDialog" name="ClusterResultsWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -155,7 +155,7 @@ QPushButton:hover#clusterScatterButton{
     <string/>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>21</x>
@@ -210,7 +210,7 @@ font-weight: 400;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>21</x>

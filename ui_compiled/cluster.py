@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'cluster.ui'
+## Form generated from reading UI file 'Cluster.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.0
 ##
@@ -20,12 +20,12 @@ from PySide6.QtWidgets import (QApplication, QDialog, QFrame, QHBoxLayout,
     QRadioButton, QScrollArea, QSizePolicy, QTableView,
     QVBoxLayout, QWidget)
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        if not Dialog.objectName():
-            Dialog.setObjectName(u"Dialog")
-        Dialog.resize(1135, 699)
-        self.importDataButton = QPushButton(Dialog)
+class Ui_ClusterWindow(object):
+    def setupUi(self, ClusterWindow):
+        if not ClusterWindow.objectName():
+            ClusterWindow.setObjectName(u"ClusterWindow")
+        ClusterWindow.resize(1135, 699)
+        self.importDataButton = QPushButton(ClusterWindow)
         self.importDataButton.setObjectName(u"importDataButton")
         self.importDataButton.setGeometry(QRect(20, 510, 121, 41))
         self.importDataButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
@@ -41,7 +41,7 @@ class Ui_Dialog(object):
 "}\n"
 "")
         self.importDataButton.setAutoDefault(True)
-        self.enterDataButton = QPushButton(Dialog)
+        self.enterDataButton = QPushButton(ClusterWindow)
         self.enterDataButton.setObjectName(u"enterDataButton")
         self.enterDataButton.setGeometry(QRect(170, 510, 131, 41))
         self.enterDataButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
@@ -57,7 +57,7 @@ class Ui_Dialog(object):
 "}\n"
 "")
         self.enterDataButton.setAutoDefault(True)
-        self.layoutWidget = QWidget(Dialog)
+        self.layoutWidget = QWidget(ClusterWindow)
         self.layoutWidget.setObjectName(u"layoutWidget")
         self.layoutWidget.setGeometry(QRect(20, 10, 921, 481))
         self.verticalLayout_2 = QVBoxLayout(self.layoutWidget)
@@ -90,7 +90,7 @@ class Ui_Dialog(object):
 
         self.verticalLayout_2.addWidget(self.dataView)
 
-        self.metricFeatures_scrollArea = QScrollArea(Dialog)
+        self.metricFeatures_scrollArea = QScrollArea(ClusterWindow)
         self.metricFeatures_scrollArea.setObjectName(u"metricFeatures_scrollArea")
         self.metricFeatures_scrollArea.setGeometry(QRect(950, 70, 161, 421))
         self.metricFeatures_scrollArea.setWidgetResizable(True)
@@ -98,7 +98,7 @@ class Ui_Dialog(object):
         self.checkBoxContainer.setObjectName(u"checkBoxContainer")
         self.checkBoxContainer.setGeometry(QRect(0, 0, 159, 419))
         self.metricFeatures_scrollArea.setWidget(self.checkBoxContainer)
-        self.analyzeButton = QPushButton(Dialog)
+        self.analyzeButton = QPushButton(ClusterWindow)
         self.analyzeButton.setObjectName(u"analyzeButton")
         self.analyzeButton.setGeometry(QRect(960, 510, 131, 41))
         self.analyzeButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
@@ -114,7 +114,7 @@ class Ui_Dialog(object):
 "}\n"
 "")
         self.analyzeButton.setAutoDefault(True)
-        self.layoutWidget1 = QWidget(Dialog)
+        self.layoutWidget1 = QWidget(ClusterWindow)
         self.layoutWidget1.setObjectName(u"layoutWidget1")
         self.layoutWidget1.setGeometry(QRect(20, 560, 316, 81))
         self.verticalLayout_3 = QVBoxLayout(self.layoutWidget1)
@@ -148,7 +148,7 @@ class Ui_Dialog(object):
 
         self.verticalLayout_3.addLayout(self.horizontalLayout)
 
-        self.layoutWidget2 = QWidget(Dialog)
+        self.layoutWidget2 = QWidget(ClusterWindow)
         self.layoutWidget2.setObjectName(u"layoutWidget2")
         self.layoutWidget2.setGeometry(QRect(360, 560, 161, 81))
         self.verticalLayout_4 = QVBoxLayout(self.layoutWidget2)
@@ -168,20 +168,20 @@ class Ui_Dialog(object):
         self.verticalLayout_4.addWidget(self.numClusters_tbx)
 
 
-        self.retranslateUi(Dialog)
+        self.retranslateUi(ClusterWindow)
 
-        QMetaObject.connectSlotsByName(Dialog)
+        QMetaObject.connectSlotsByName(ClusterWindow)
     # setupUi
 
-    def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Dialog", None))
-        self.importDataButton.setText(QCoreApplication.translate("Dialog", u"Import data", None))
-        self.enterDataButton.setText(QCoreApplication.translate("Dialog", u"Enter Data", None))
-        self.label.setText(QCoreApplication.translate("Dialog", u"\u041a\u043b\u0430\u0441\u0442\u0435\u0440\u0438\u0437\u0430\u0446\u0438\u044f", None))
-        self.analyzeButton.setText(QCoreApplication.translate("Dialog", u"Analyze", None))
-        self.label_2.setText(QCoreApplication.translate("Dialog", u"\u041c\u0435\u0442\u043e\u0434 \u043a\u043b\u0430\u0441\u0442\u0435\u0440\u0438\u0437\u0430\u0446\u0438\u0438", None))
-        self.radioKMeans.setText(QCoreApplication.translate("Dialog", u"K-Means Cluster", None))
-        self.radioDBSCAN.setText(QCoreApplication.translate("Dialog", u"DBSCAN Cluster", None))
-        self.label_3.setText(QCoreApplication.translate("Dialog", u"\u041a\u043e\u043b-\u0432\u043e \u043a\u043b\u0430\u0441\u0442\u0435\u0440\u043e\u0432", None))
+    def retranslateUi(self, ClusterWindow):
+        ClusterWindow.setWindowTitle(QCoreApplication.translate("ClusterWindow", u"Dialog", None))
+        self.importDataButton.setText(QCoreApplication.translate("ClusterWindow", u"Import data", None))
+        self.enterDataButton.setText(QCoreApplication.translate("ClusterWindow", u"Enter Data", None))
+        self.label.setText(QCoreApplication.translate("ClusterWindow", u"\u041a\u043b\u0430\u0441\u0442\u0435\u0440\u0438\u0437\u0430\u0446\u0438\u044f", None))
+        self.analyzeButton.setText(QCoreApplication.translate("ClusterWindow", u"Analyze", None))
+        self.label_2.setText(QCoreApplication.translate("ClusterWindow", u"\u041c\u0435\u0442\u043e\u0434 \u043a\u043b\u0430\u0441\u0442\u0435\u0440\u0438\u0437\u0430\u0446\u0438\u0438", None))
+        self.radioKMeans.setText(QCoreApplication.translate("ClusterWindow", u"K-Means Cluster", None))
+        self.radioDBSCAN.setText(QCoreApplication.translate("ClusterWindow", u"DBSCAN Cluster", None))
+        self.label_3.setText(QCoreApplication.translate("ClusterWindow", u"\u041a\u043e\u043b-\u0432\u043e \u043a\u043b\u0430\u0441\u0442\u0435\u0440\u043e\u0432", None))
     # retranslateUi
 

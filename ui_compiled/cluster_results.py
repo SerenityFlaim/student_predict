@@ -19,12 +19,12 @@ from PySide6.QtWidgets import (QApplication, QDialog, QFrame, QHBoxLayout,
     QHeaderView, QLabel, QPushButton, QSizePolicy,
     QTableView, QVBoxLayout, QWidget)
 
-class Ui_Dialog(object):
-    def setupUi(self, Dialog):
-        if not Dialog.objectName():
-            Dialog.setObjectName(u"Dialog")
-        Dialog.resize(1001, 709)
-        self.layoutWidget = QWidget(Dialog)
+class Ui_ClusterResultsWindow(object):
+    def setupUi(self, ClusterResultsWindow):
+        if not ClusterResultsWindow.objectName():
+            ClusterResultsWindow.setObjectName(u"ClusterResultsWindow")
+        ClusterResultsWindow.resize(1001, 709)
+        self.layoutWidget = QWidget(ClusterResultsWindow)
         self.layoutWidget.setObjectName(u"layoutWidget")
         self.layoutWidget.setGeometry(QRect(20, 20, 451, 62))
         self.verticalLayout = QVBoxLayout(self.layoutWidget)
@@ -47,12 +47,12 @@ class Ui_Dialog(object):
 
         self.verticalLayout.addWidget(self.frame)
 
-        self.elbow_title_lbl = QLabel(Dialog)
+        self.elbow_title_lbl = QLabel(ClusterResultsWindow)
         self.elbow_title_lbl.setObjectName(u"elbow_title_lbl")
         self.elbow_title_lbl.setGeometry(QRect(340, 90, 181, 44))
         self.elbow_title_lbl.setStyleSheet(u"font-size: 19px;\n"
 "font-weight: 400;")
-        self.fileButton = QPushButton(Dialog)
+        self.fileButton = QPushButton(ClusterResultsWindow)
         self.fileButton.setObjectName(u"fileButton")
         self.fileButton.setGeometry(QRect(20, 620, 171, 41))
         self.fileButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
@@ -68,7 +68,7 @@ class Ui_Dialog(object):
 "}\n"
 "")
         self.fileButton.setAutoDefault(True)
-        self.clusterScatterButton = QPushButton(Dialog)
+        self.clusterScatterButton = QPushButton(ClusterResultsWindow)
         self.clusterScatterButton.setObjectName(u"clusterScatterButton")
         self.clusterScatterButton.setGeometry(QRect(220, 620, 141, 41))
         self.clusterScatterButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
@@ -84,18 +84,18 @@ class Ui_Dialog(object):
 "}\n"
 "")
         self.clusterScatterButton.setAutoDefault(True)
-        self.elbow_lbl = QLabel(Dialog)
+        self.elbow_lbl = QLabel(ClusterResultsWindow)
         self.elbow_lbl.setObjectName(u"elbow_lbl")
         self.elbow_lbl.setEnabled(True)
         self.elbow_lbl.setGeometry(QRect(350, 130, 601, 451))
         self.elbow_lbl.setMidLineWidth(2)
-        self.widget = QWidget(Dialog)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(21, 101, 293, 228))
-        self.verticalLayout_2 = QVBoxLayout(self.widget)
+        self.layoutWidget1 = QWidget(ClusterResultsWindow)
+        self.layoutWidget1.setObjectName(u"layoutWidget1")
+        self.layoutWidget1.setGeometry(QRect(21, 101, 293, 228))
+        self.verticalLayout_2 = QVBoxLayout(self.layoutWidget1)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.centers_lbl = QLabel(self.widget)
+        self.centers_lbl = QLabel(self.layoutWidget1)
         self.centers_lbl.setObjectName(u"centers_lbl")
         self.centers_lbl.setStyleSheet(u"font-size: 19px;\n"
 "font-weight: 400;")
@@ -105,12 +105,12 @@ class Ui_Dialog(object):
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setSpacing(30)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.centersView = QTableView(self.widget)
+        self.centersView = QTableView(self.layoutWidget1)
         self.centersView.setObjectName(u"centersView")
 
         self.horizontalLayout.addWidget(self.centersView)
 
-        self.frame_2 = QFrame(self.widget)
+        self.frame_2 = QFrame(self.layoutWidget1)
         self.frame_2.setObjectName(u"frame_2")
         self.frame_2.setAutoFillBackground(False)
         self.frame_2.setStyleSheet(u"color: rgb(0, 204, 255);")
@@ -124,13 +124,13 @@ class Ui_Dialog(object):
 
         self.verticalLayout_2.addLayout(self.horizontalLayout)
 
-        self.widget1 = QWidget(Dialog)
-        self.widget1.setObjectName(u"widget1")
-        self.widget1.setGeometry(QRect(21, 351, 293, 228))
-        self.verticalLayout_3 = QVBoxLayout(self.widget1)
+        self.layoutWidget2 = QWidget(ClusterResultsWindow)
+        self.layoutWidget2.setObjectName(u"layoutWidget2")
+        self.layoutWidget2.setGeometry(QRect(21, 351, 293, 228))
+        self.verticalLayout_3 = QVBoxLayout(self.layoutWidget2)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.stats_lbl = QLabel(self.widget1)
+        self.stats_lbl = QLabel(self.layoutWidget2)
         self.stats_lbl.setObjectName(u"stats_lbl")
         self.stats_lbl.setStyleSheet(u"font-size: 19px;\n"
 "font-weight: 400;")
@@ -140,12 +140,12 @@ class Ui_Dialog(object):
         self.horizontalLayout_2 = QHBoxLayout()
         self.horizontalLayout_2.setSpacing(30)
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.clusterStatsView = QTableView(self.widget1)
+        self.clusterStatsView = QTableView(self.layoutWidget2)
         self.clusterStatsView.setObjectName(u"clusterStatsView")
 
         self.horizontalLayout_2.addWidget(self.clusterStatsView)
 
-        self.frame_3 = QFrame(self.widget1)
+        self.frame_3 = QFrame(self.layoutWidget2)
         self.frame_3.setObjectName(u"frame_3")
         self.frame_3.setAutoFillBackground(False)
         self.frame_3.setStyleSheet(u"color: rgb(0, 204, 255);")
@@ -160,19 +160,19 @@ class Ui_Dialog(object):
         self.verticalLayout_3.addLayout(self.horizontalLayout_2)
 
 
-        self.retranslateUi(Dialog)
+        self.retranslateUi(ClusterResultsWindow)
 
-        QMetaObject.connectSlotsByName(Dialog)
+        QMetaObject.connectSlotsByName(ClusterResultsWindow)
     # setupUi
 
-    def retranslateUi(self, Dialog):
-        Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Dialog", None))
-        self.label.setText(QCoreApplication.translate("Dialog", u"\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u043a\u043b\u0430\u0441\u0442\u0435\u0440\u0438\u0437\u0430\u0446\u0438\u0438", None))
-        self.elbow_title_lbl.setText(QCoreApplication.translate("Dialog", u"\u041f\u0440\u0430\u0432\u0438\u043b\u043e \u041b\u043e\u043a\u0442\u044f", None))
-        self.fileButton.setText(QCoreApplication.translate("Dialog", u"Download Results", None))
-        self.clusterScatterButton.setText(QCoreApplication.translate("Dialog", u"Scatter Plot", None))
+    def retranslateUi(self, ClusterResultsWindow):
+        ClusterResultsWindow.setWindowTitle(QCoreApplication.translate("ClusterResultsWindow", u"Dialog", None))
+        self.label.setText(QCoreApplication.translate("ClusterResultsWindow", u"\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u043a\u043b\u0430\u0441\u0442\u0435\u0440\u0438\u0437\u0430\u0446\u0438\u0438", None))
+        self.elbow_title_lbl.setText(QCoreApplication.translate("ClusterResultsWindow", u"\u041f\u0440\u0430\u0432\u0438\u043b\u043e \u041b\u043e\u043a\u0442\u044f", None))
+        self.fileButton.setText(QCoreApplication.translate("ClusterResultsWindow", u"Download Results", None))
+        self.clusterScatterButton.setText(QCoreApplication.translate("ClusterResultsWindow", u"Scatter Plot", None))
         self.elbow_lbl.setText("")
-        self.centers_lbl.setText(QCoreApplication.translate("Dialog", u"\u0426\u0435\u043d\u0442\u0440\u044b \u043a\u043b\u0430\u0441\u0442\u0435\u0440\u043e\u0432", None))
-        self.stats_lbl.setText(QCoreApplication.translate("Dialog", u"\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430", None))
+        self.centers_lbl.setText(QCoreApplication.translate("ClusterResultsWindow", u"\u0426\u0435\u043d\u0442\u0440\u044b \u043a\u043b\u0430\u0441\u0442\u0435\u0440\u043e\u0432", None))
+        self.stats_lbl.setText(QCoreApplication.translate("ClusterResultsWindow", u"\u0421\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043a\u0430", None))
     # retranslateUi
 

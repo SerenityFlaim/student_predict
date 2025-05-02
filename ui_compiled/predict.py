@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MainWindow.ui'
+## Form generated from reading UI file 'PredictWindow.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.8.0
 ##
@@ -20,13 +20,13 @@ from PySide6.QtWidgets import (QApplication, QHBoxLayout, QLabel, QLineEdit,
     QWidget)
 import ui_compiled.source
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
-            MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1051, 618)
-        MainWindow.setIconSize(QSize(50, 50))
-        self.centralwidget = QWidget(MainWindow)
+class Ui_PredictWindow(object):
+    def setupUi(self, PredictWindow):
+        if not PredictWindow.objectName():
+            PredictWindow.setObjectName(u"PredictWindow")
+        PredictWindow.resize(1051, 618)
+        PredictWindow.setIconSize(QSize(50, 50))
+        self.centralwidget = QWidget(PredictWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"")
         self.settings_btn = QPushButton(self.centralwidget)
@@ -136,21 +136,21 @@ class Ui_MainWindow(object):
         self.plot_lbl.setObjectName(u"plot_lbl")
         self.plot_lbl.setEnabled(True)
         self.plot_lbl.setGeometry(QRect(180, 60, 641, 481))
-        MainWindow.setCentralWidget(self.centralwidget)
+        PredictWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
+        self.retranslateUi(PredictWindow)
 
-        QMetaObject.connectSlotsByName(MainWindow)
+        QMetaObject.connectSlotsByName(PredictWindow)
     # setupUi
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+    def retranslateUi(self, PredictWindow):
+        PredictWindow.setWindowTitle(QCoreApplication.translate("PredictWindow", u"MainWindow", None))
         self.settings_btn.setText("")
-        self.title.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0433\u043d\u043e\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435", None))
-        self.add_data_btn.setText(QCoreApplication.translate("MainWindow", u"\u0412\u0432\u0435\u0441\u0442\u0438 \u0434\u0430\u043d\u043d\u044b\u0435", None))
-        self.predict_btn.setText(QCoreApplication.translate("MainWindow", u"\u0421\u0434\u0435\u043b\u0430\u0442\u044c \u043f\u0440\u043e\u0433\u043d\u043e\u0437", None))
-        self.features_btn.setText(QCoreApplication.translate("MainWindow", u"\u0425\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442:", None))
+        self.title.setText(QCoreApplication.translate("PredictWindow", u"\u041f\u0440\u043e\u0433\u043d\u043e\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435", None))
+        self.add_data_btn.setText(QCoreApplication.translate("PredictWindow", u"\u0412\u0432\u0435\u0441\u0442\u0438 \u0434\u0430\u043d\u043d\u044b\u0435", None))
+        self.predict_btn.setText(QCoreApplication.translate("PredictWindow", u"\u0421\u0434\u0435\u043b\u0430\u0442\u044c \u043f\u0440\u043e\u0433\u043d\u043e\u0437", None))
+        self.features_btn.setText(QCoreApplication.translate("PredictWindow", u"\u0425\u0430\u0440\u0430\u043a\u0442\u0435\u0440\u0438\u0441\u0442\u0438\u043a\u0438", None))
+        self.label.setText(QCoreApplication.translate("PredictWindow", u"\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442:", None))
         self.plot_lbl.setText("")
     # retranslateUi
 

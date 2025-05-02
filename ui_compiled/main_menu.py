@@ -18,12 +18,12 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QMainWindow,
     QPushButton, QSizePolicy, QWidget)
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        if not MainWindow.objectName():
-            MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(715, 458)
-        self.centralwidget = QWidget(MainWindow)
+class Ui_MenuWindow(object):
+    def setupUi(self, MenuWindow):
+        if not MenuWindow.objectName():
+            MenuWindow.setObjectName(u"MenuWindow")
+        MenuWindow.resize(715, 458)
+        self.centralwidget = QWidget(MenuWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.clusterWindowButton = QPushButton(self.centralwidget)
         self.clusterWindowButton.setObjectName(u"clusterWindowButton")
@@ -87,20 +87,20 @@ class Ui_MainWindow(object):
         self.frame.setFrameShape(QFrame.Shape.HLine)
         self.frame.setFrameShadow(QFrame.Shadow.Plain)
         self.frame.setLineWidth(2)
-        MainWindow.setCentralWidget(self.centralwidget)
+        MenuWindow.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
+        self.retranslateUi(MenuWindow)
 
-        QMetaObject.connectSlotsByName(MainWindow)
+        QMetaObject.connectSlotsByName(MenuWindow)
     # setupUi
 
-    def retranslateUi(self, MainWindow):
-        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.clusterWindowButton.setText(QCoreApplication.translate("MainWindow", u"\u041a\u043b\u0430\u0441\u0442\u0435\u0440\u0438\u0437\u0430\u0446\u0438\u044f", None))
-        self.predictWindowButton.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0433\u043d\u043e\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435", None))
-        self.title.setText(QCoreApplication.translate("MainWindow", u"\u041c\u043e\u0434\u0443\u043b\u044c \u0434\u0438\u0430\u0433\u043d\u043e\u0441\u0442\u0438\u043a\u0438", None))
-        self.title_2.setText(QCoreApplication.translate("MainWindow", u"\u041c\u0435\u043d\u044e", None))
-        self.title_3.setText(QCoreApplication.translate("MainWindow", u"\u043f\u0440\u043e\u0433\u043d\u043e\u0437 \u0441\u0440\u0435\u0434\u043d\u0435\u0433\u043e \u0431\u0430\u043b\u043b\u0430 \u0443\u0441\u043f\u0435\u0432\u0430\u0435\u043c\u043e\u0441\u0442\u0438", None))
-        self.title_4.setText(QCoreApplication.translate("MainWindow", u"\u043a\u043b\u0430\u0441\u0442\u0435\u0440\u0438\u0437\u0430\u0446\u0438\u044f K-Means, DBSCAN", None))
+    def retranslateUi(self, MenuWindow):
+        MenuWindow.setWindowTitle(QCoreApplication.translate("MenuWindow", u"MainWindow", None))
+        self.clusterWindowButton.setText(QCoreApplication.translate("MenuWindow", u"\u041a\u043b\u0430\u0441\u0442\u0435\u0440\u0438\u0437\u0430\u0446\u0438\u044f", None))
+        self.predictWindowButton.setText(QCoreApplication.translate("MenuWindow", u"\u041f\u0440\u043e\u0433\u043d\u043e\u0437\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435", None))
+        self.title.setText(QCoreApplication.translate("MenuWindow", u"\u041c\u043e\u0434\u0443\u043b\u044c \u0434\u0438\u0430\u0433\u043d\u043e\u0441\u0442\u0438\u043a\u0438", None))
+        self.title_2.setText(QCoreApplication.translate("MenuWindow", u"\u041c\u0435\u043d\u044e", None))
+        self.title_3.setText(QCoreApplication.translate("MenuWindow", u"\u043f\u0440\u043e\u0433\u043d\u043e\u0437 \u0441\u0440\u0435\u0434\u043d\u0435\u0433\u043e \u0431\u0430\u043b\u043b\u0430 \u0443\u0441\u043f\u0435\u0432\u0430\u0435\u043c\u043e\u0441\u0442\u0438", None))
+        self.title_4.setText(QCoreApplication.translate("MenuWindow", u"\u043a\u043b\u0430\u0441\u0442\u0435\u0440\u0438\u0437\u0430\u0446\u0438\u044f K-Means, DBSCAN", None))
     # retranslateUi
 

@@ -1,5 +1,5 @@
 import os
-from ui_compiled.main_window import Ui_MainWindow
+from ui_compiled.predict import Ui_PredictWindow
 from ui_compiled.settings_dialog import Ui_Settings
 from ui_compiled.student_dialog import Ui_Student_data
 
@@ -13,7 +13,7 @@ from models.error_handler import ErrorHandler
 class StudentPredict(QMainWindow):
     def __init__(self):
         super(StudentPredict, self).__init__()
-        self.ui = Ui_MainWindow()
+        self.ui = Ui_PredictWindow()
         self.ui.setupUi(self)
         
         self.data_window = None
