@@ -1,8 +1,6 @@
 import pandas as pd
 from PySide6.QtWidgets import QFileDialog, QMessageBox
-from PySide6.QtCore import Qt
 from models.error_handler import ErrorHandler
-import sys
 
 
 class FileProcessor:
