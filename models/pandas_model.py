@@ -29,20 +29,17 @@ class PandasModel(QAbstractTableModel):
     def setHeaderData(self, section, orientation, value, role=Qt.EditRole):
         if role == Qt.EditRole and orientation == Qt.Horizontal:
             try:
-                # Сохраняем старые данные
                 old_data = self._data.copy()
                 
-                # Меняем названия столбцов
                 new_columns = self._data.columns.tolist()
                 new_columns[section] = value
                 self._data.columns = new_columns
                 
-                # Сохраняем типы данных
                 for col in new_columns:
                     if col in old_data.columns:
                         self._data[col] = old_data[col].astype(old_data[col].dtype)
                     else:
-                        self._data[col] = ""  # Для новых столбцов
+                        self._data[col] = ""
                 
                 self.headerDataChanged.emit(orientation, section, section)
                 return True
@@ -75,7 +72,7 @@ class PandasModel(QAbstractTableModel):
     def clear_data(self, rows=50, columns=12):
         self.beginResetModel()
         self._data = pd.DataFrame(
-            [[None]*columns for _ in range(rows)],  # Явные пустые значения
+            [[None]*columns for _ in range(rows)],
             columns=[f"Column_{i+1}" for i in range(columns)]
         )
         self.endResetModel()

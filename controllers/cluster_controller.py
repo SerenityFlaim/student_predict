@@ -68,7 +68,10 @@ class ClusterController:
         print(df_transformed)
 
         self.strategy.cluster(df_transformed, n_clusters)
-        self.results_controller.configure_results(df_transformed)
+        self.results_controller.configure_results(df_transformed, self.strategy.get_centroids())
+
+        print("CENTROIDS DATAFRAME")
+        print(pd.DataFrame(self.strategy.get_centroids()))
 
         result = self.strategy.get_labels()
         print("RESULT")
