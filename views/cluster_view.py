@@ -22,7 +22,7 @@ class ClusterView(QDialog):
         self.controller = controller
 
         self.ui.importDataButton.clicked.connect(self.controller.on_import_data)
-        # self.ui.enterDataButton.clicked.connect(self.controller.enter_data)
+        self.ui.enterDataButton.clicked.connect(self.controller.on_enter_data)
         self.ui.analyzeButton.clicked.connect(self.controller.on_analyze)
 
     def set_table(self, table_model):
@@ -50,3 +50,12 @@ class ClusterView(QDialog):
         else:
             if column_name in self.selected_columns:
                 self.selected_columns.remove(column_name)
+
+    def keyPressEvent(self, event):
+        if event.key() == Qt.Key_V and event.modifiers() == Qt.ControlModifier:
+            if self.controller:
+                self.controller.handle_paste()
+            else:
+                event.ignore()
+        else:
+            super().keyPressEvent(event)
