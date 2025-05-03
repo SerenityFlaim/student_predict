@@ -10,3 +10,8 @@ class ClusterResultsView(QDialog):
 
     def set_controller(self, controller):
         self.controller = controller
+
+    def set_plot(self, pixmap):
+        print("Pixmap size:", pixmap.size())
+        self.ui.elbow_lbl.setPixmap(pixmap)
+        self.ui.elbow_lbl.setScaledContents(True)

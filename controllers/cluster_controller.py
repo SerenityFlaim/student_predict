@@ -31,7 +31,7 @@ class ClusterController:
         self.view.set_table(self.table_model)
 
     def on_enter_data(self, rows=50, cols=12):
-        empty_df = pd.DataFrame( #12 50 12
+        empty_df = pd.DataFrame(
             [[""]*12 for _ in range(50)],
             columns=[f"Column_{i+1}" for i in range(12)]
         )
@@ -54,6 +54,7 @@ class ClusterController:
     def on_analyze(self):
         if self.view.ui.radioKMeans.isChecked():
             self.set_strategy(ClusterKMeansStrategy())
+            self.results_controller.set_plot_visible(True)
         elif self.view.ui.radioDBSCAN.isChecked():
             self.set_strategy(ClusterDBSCANStrategy())
         else:
@@ -67,6 +68,8 @@ class ClusterController:
         print(df_transformed)
 
         self.strategy.cluster(df_transformed, n_clusters)
+        self.results_controller.configure_results(df_transformed)
+
         result = self.strategy.get_labels()
         print("RESULT")
         print(result)
