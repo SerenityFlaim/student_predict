@@ -42,10 +42,12 @@ class ClusterView(QDialog):
         self.ui.metricFeatures_scrollArea.setWidget(self.scroll_content)
 
     def update_selection(self, state):
+        print("state_changed")
         checkbox = self.sender()
         column_name = checkbox.text()
-        if state == Qt.Checked:
+        if checkbox.isChecked():
             if column_name not in self.selected_columns:
+                print("column appended")
                 self.selected_columns.append(column_name)
         else:
             if column_name in self.selected_columns:
@@ -59,3 +61,5 @@ class ClusterView(QDialog):
                 event.ignore()
         else:
             super().keyPressEvent(event)
+
+    
