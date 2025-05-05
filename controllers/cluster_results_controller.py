@@ -37,13 +37,16 @@ class ClusterResultsController:
             plt.close(plotter.current_figure)
 
             centroid_df = pd.DataFrame(centroids)
-            self.load_df(centroid_df)
+            self.load_df(centroid_df, self.view.set_centroids)
         
         self.add_cluster_column(df, labels)
+        stats_df = self.calculate_cluster_statistics(self.result_df)
+        self.load_df(stats_df, self.view.set_stats)
 
-    def load_df(self, df):
+    def load_df(self, df, view_method):
         table_model = PandasModel(df)
-        self.view.set_centroids(table_model)
+        view_method(table_model)
+        #self.view.set_centroids(table_model)
 
     def add_cluster_column(self, data_frame, labels):
         df_with_clusters = data_frame.copy()
@@ -56,3 +59,25 @@ class ClusterResultsController:
         print(dest_path)
         save_path = f"{dest_path}/clustered_data.csv"
         self.result_df.to_csv(save_path, index=False)
+
+    def calculate_cluster_statistics(self, df):
+        stats = df["Cluster"].value_counts(dropna=False).sort_index()
+        result = {}
+
+        valid_total = 0
+
+        for cluster_id, count in stats.items():
+            if pd.isna(cluster_id):
+                result['Missing'] = count
+            else:
+                result[int(cluster_id)] = count
+                valid_total += count
+
+        result['Valid'] = valid_total
+        if 'Missing' not in result:
+            result['Missing'] = 0
+
+        print(result)
+        stats_df = pd.DataFrame.from_dict(result, orient='index', columns=["Cases"])
+        print(stats_df)
+        return stats_df

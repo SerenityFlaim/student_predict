@@ -27,3 +27,7 @@ class ClusterResultsView(QDialog):
     def set_centroids(self, table_model):
         self.ui.centersView.setModel(table_model)
         self.ui.centersView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)
+
+    def set_stats(self, table_model):
+        self.ui.clusterStatsView.setModel(table_model)
+        self.ui.clusterStatsView.horizontalHeader().setSectionResizeMode(QHeaderView.Stretch)

@@ -30,7 +30,6 @@ class ClusterKMeansStrategy(ClusterStrategyInterface):
         return self.labels_
     
     def get_centroids(self):
-        print(self.cluster_centers_)
         return self.scaler.inverse_transform(self.cluster_centers_)
         
 class ClusterDBSCANStrategy(ClusterStrategyInterface):
@@ -48,3 +47,6 @@ class ClusterDBSCANStrategy(ClusterStrategyInterface):
 
     def get_labels(self):
         return self.labels_
+    
+    def get_centroids(self):
+        return None
