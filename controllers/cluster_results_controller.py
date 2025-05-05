@@ -3,6 +3,7 @@ from models.plotter import Plotter
 from io import BytesIO
 import matplotlib.pyplot as plt
 from models.pandas_model import PandasModel
+from models.file_processor import FileProcessor
 import pandas as pd
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 
@@ -11,6 +12,7 @@ class ClusterResultsController:
         self.view = view
         self.view.set_controller(self)
         self.plot_visible = False
+        self.result_df = None
 
     def show_view(self):
         self.view.show()
@@ -18,7 +20,7 @@ class ClusterResultsController:
     def set_plot_visible(self, flag: bool):
         self.plot_visible = flag
 
-    def configure_results(self, df, centroids=None):
+    def configure_results(self, df, labels, centroids=None):
         if self.plot_visible:
             plotter = Plotter()
             plotter.plot_elbow_method(df)
@@ -36,7 +38,21 @@ class ClusterResultsController:
 
             centroid_df = pd.DataFrame(centroids)
             self.load_df(centroid_df)
+        
+        self.add_cluster_column(df, labels)
 
     def load_df(self, df):
         table_model = PandasModel(df)
         self.view.set_centroids(table_model)
+
+    def add_cluster_column(self, data_frame, labels):
+        df_with_clusters = data_frame.copy()
+        df_with_clusters["Cluster"] = labels
+        self.result_df = df_with_clusters
+
+    def download_results(self):
+        fp = FileProcessor()
+        dest_path = fp.select_res_dest()
+        print(dest_path)
+        save_path = f"{dest_path}/clustered_data.csv"
+        self.result_df.to_csv(save_path, index=False)

@@ -17,6 +17,8 @@ class ClusterResultsView(QDialog):
     def set_controller(self, controller):
         self.controller = controller
 
+        self.ui.fileButton.clicked.connect(self.controller.download_results)
+
     def set_plot(self, pixmap):
         print("Pixmap size:", pixmap.size())
         self.ui.elbow_lbl.setPixmap(pixmap)

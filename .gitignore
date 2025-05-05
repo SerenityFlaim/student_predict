@@ -4,3 +4,4 @@ student-scores.csv
 __pycache__
 myenv
 .venv
+test_results

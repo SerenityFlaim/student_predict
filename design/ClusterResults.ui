@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1001</width>
-    <height>709</height>
+    <width>1131</width>
+    <height>768</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -58,7 +58,7 @@ font-weight: 600;</string>
   <widget class="QLabel" name="elbow_title_lbl">
    <property name="geometry">
     <rect>
-     <x>340</x>
+     <x>410</x>
      <y>90</y>
      <width>181</width>
      <height>44</height>
@@ -76,7 +76,7 @@ font-weight: 400;</string>
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>620</y>
+     <y>690</y>
      <width>171</width>
      <height>41</height>
     </rect>
@@ -108,7 +108,7 @@ QPushButton:hover#fileButton{
    <property name="geometry">
     <rect>
      <x>220</x>
-     <y>620</y>
+     <y>690</y>
      <width>141</width>
      <height>41</height>
     </rect>
@@ -142,10 +142,10 @@ QPushButton:hover#clusterScatterButton{
    </property>
    <property name="geometry">
     <rect>
-     <x>350</x>
+     <x>400</x>
      <y>130</y>
-     <width>601</width>
-     <height>451</height>
+     <width>711</width>
+     <height>501</height>
     </rect>
    </property>
    <property name="midLineWidth">
@@ -160,8 +160,8 @@ QPushButton:hover#clusterScatterButton{
     <rect>
      <x>21</x>
      <y>101</y>
-     <width>293</width>
-     <height>228</height>
+     <width>341</width>
+     <height>271</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -213,10 +213,10 @@ font-weight: 400;</string>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>21</x>
-     <y>351</y>
-     <width>293</width>
-     <height>228</height>
+     <x>20</x>
+     <y>390</y>
+     <width>341</width>
+     <height>281</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">

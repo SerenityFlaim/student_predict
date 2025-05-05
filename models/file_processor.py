@@ -22,7 +22,6 @@ class FileProcessor:
     def csv_to_dataframe(self, file_path=None):
         file_path = file_path if file_path != None else self.file_path
         if not file_path:
-            #QMessageBox.critical(None, "Error", "Файл не выбран!")
             ErrorHandler.create_error("Файл не выбран!")
             return None
         try:
@@ -35,3 +34,17 @@ class FileProcessor:
         except:
             ErrorHandler.create_error("Не удалось загрузить файл.")
         return None
+    
+    def select_res_dest(self):
+        folder_path = QFileDialog.getExistingDirectory(
+            None,
+            "Выберите папку для сохранения",
+            "",
+            QFileDialog.ShowDirsOnly | QFileDialog.DontResolveSymlinks
+        )
+
+        if folder_path:
+            return folder_path
+        else:
+            ErrorHandler.create_error("Папка не выбрана.")
+            return None
