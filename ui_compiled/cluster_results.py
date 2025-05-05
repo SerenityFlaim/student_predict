@@ -64,7 +64,7 @@ class Ui_ClusterResultsWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover#fileButton{\n"
-"	background-color: rgb(230, 250, 255);\n"
+"	background-color: rgb(179, 236, 255);\n"
 "}\n"
 "")
         self.fileButton.setAutoDefault(True)
@@ -80,7 +80,7 @@ class Ui_ClusterResultsWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover#clusterScatterButton{\n"
-"	background-color: rgb(230, 250, 255);\n"
+"	background-color: rgb(179, 236, 255);\n"
 "}\n"
 "")
         self.clusterScatterButton.setAutoDefault(True)

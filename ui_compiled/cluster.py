@@ -37,7 +37,7 @@ class Ui_ClusterWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover#importDataButton{\n"
-"	background-color: rgb(230, 250, 255);\n"
+"	background-color: rgb(179, 236, 255);\n"
 "}\n"
 "")
         self.importDataButton.setAutoDefault(True)
@@ -53,7 +53,7 @@ class Ui_ClusterWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover#enterDataButton{\n"
-"	background-color: rgb(230, 250, 255);\n"
+"	background-color: rgb(179, 236, 255);\n"
 "}\n"
 "")
         self.enterDataButton.setAutoDefault(True)
@@ -110,7 +110,7 @@ class Ui_ClusterWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover#analyzeButton{\n"
-"	background-color: rgb(230, 250, 255);\n"
+"	background-color: rgb(179, 236, 255);\n"
 "}\n"
 "")
         self.analyzeButton.setAutoDefault(True)

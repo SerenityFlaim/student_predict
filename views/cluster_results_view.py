@@ -18,6 +18,8 @@ class ClusterResultsView(QDialog):
         self.controller = controller
 
         self.ui.fileButton.clicked.connect(self.controller.download_results)
+        self.ui.clusterScatterButton.clicked.connect(self.controller.on_show_scatter)
+
 
     def set_plot(self, pixmap):
         print("Pixmap size:", pixmap.size())

@@ -66,7 +66,7 @@ class Ui_PredictWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover#add_data_btn{\n"
-"	background-color: rgb(230, 250, 255);\n"
+"	background-color: rgb(179, 236, 255);\n"
 "}")
 
         self.horizontalLayout.addWidget(self.add_data_btn)
@@ -84,7 +84,7 @@ class Ui_PredictWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover#predict_btn{\n"
-"	background-color: rgb(230, 250, 255);\n"
+"	background-color: rgb(179, 236, 255);\n"
 "}")
 
         self.horizontalLayout.addWidget(self.predict_btn)
@@ -102,7 +102,7 @@ class Ui_PredictWindow(object):
 "}\n"
 "\n"
 "QPushButton:hover#features_btn{\n"
-"	background-color: rgb(230, 250, 255);\n"
+"	background-color: rgb(179, 236, 255);\n"
 "}")
 
         self.horizontalLayout.addWidget(self.features_btn)

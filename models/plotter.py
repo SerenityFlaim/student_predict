@@ -27,6 +27,21 @@ class Plotter():
         )
         ax.set_xticks(range(1, max_k+1))
         ax.grid(True)
+
+    def plot_scatter_clusters(self, df, x_col, y_col):
+        current_figure, ax = plt.subplots(figsize=(8, 6))
+        if 'Cluster' in df.columns:
+            scatter = ax.scatter(df[x_col], df[y_col], c=df['Cluster'], cmap='viridis', s=50)
+            legend = ax.legend(*scatter.legend_elements(), title="Cluster")
+            ax.add_artist(legend)
+        else:
+            ax.scatter(df[x_col], df[y_col], color='gray', s=50)
+
+        ax.set_xlabel(x_col)
+        ax.set_ylabel(y_col)
+        ax.set_title('Кластеризация: {} vs {}'.format(x_col, y_col))
+        ax.grid(True)
+        current_figure.show()
     
     def get_figure(self):
         return self.current_figure

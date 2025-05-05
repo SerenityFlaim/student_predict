@@ -24,7 +24,6 @@ class ClusterController:
         self.load_df(df)
         numeric_columns = df.select_dtypes(include=['number']).columns
         self.view.set_metric_panel(numeric_columns)
-        print(df)
 
     def load_df(self, df):
         self.table_model = PandasModel(df)

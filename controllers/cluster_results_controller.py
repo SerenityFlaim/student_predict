@@ -4,6 +4,7 @@ from io import BytesIO
 import matplotlib.pyplot as plt
 from models.pandas_model import PandasModel
 from models.file_processor import FileProcessor
+from models.error_handler import ErrorHandler
 import pandas as pd
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 
@@ -32,7 +33,6 @@ class ClusterResultsController:
             
             pixmap = QPixmap()
             pixmap.loadFromData(buf.getvalue(), 'PNG')
-            
             self.view.set_plot(pixmap)
             plt.close(plotter.current_figure)
 
@@ -46,7 +46,6 @@ class ClusterResultsController:
     def load_df(self, df, view_method):
         table_model = PandasModel(df)
         view_method(table_model)
-        #self.view.set_centroids(table_model)
 
     def add_cluster_column(self, data_frame, labels):
         df_with_clusters = data_frame.copy()
@@ -77,7 +76,14 @@ class ClusterResultsController:
         if 'Missing' not in result:
             result['Missing'] = 0
 
-        print(result)
         stats_df = pd.DataFrame.from_dict(result, orient='index', columns=["Cases"])
-        print(stats_df)
         return stats_df
+
+    def on_show_scatter(self):
+        if len(self.result_df.columns) > 3:
+            ErrorHandler.create_error("Для Scatter Plot необходимо только 2 признака.")
+        else:
+            pl = Plotter()
+            print(self.result_df.columns[0])
+            print(self.result_df.columns[1])
+            pl.plot_scatter_clusters(self.result_df, self.result_df.columns[0], self.result_df.columns[1])
