@@ -17,5 +17,5 @@ class StudentController:
             self.data = sd.data
             self.view.close_view()
         except ValueError as e:
-            ErrorHandler.create_error(str(e))
+            ErrorHandler.create_error("Данные полей не введены корректно")
             self.data = None

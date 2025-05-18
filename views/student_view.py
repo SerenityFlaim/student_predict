@@ -7,6 +7,7 @@ class StudentView(QDialog):
         self.ui = Ui_Student_data()
         self.ui.setupUi(self)
         self.controller = None
+        self.setWindowTitle("Данные о студенте")
 
     def set_controller(self, controller):
         self.controller = controller

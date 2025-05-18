@@ -51,20 +51,24 @@ class ClusterController:
 
 
     def on_analyze(self):
+        n_clusters = None
         if self.view.ui.radioKMeans.isChecked():
             self.set_strategy(ClusterKMeansStrategy())
             self.results_controller.set_plot_visible(True)
+            n_clusters = ErrorHandler.check_positive_integer(self.view.ui.numClusters_tbx.text(), "Некорректное значение кластеров!")
         elif self.view.ui.radioDBSCAN.isChecked():
             self.set_strategy(ClusterDBSCANStrategy())
         else:
             ErrorHandler.create_error("Метод кластеризации не был выбран.")
 
-        n_clusters = int(self.view.ui.numClusters_tbx.text())
         data_frame = self.table_model.get_updated_data()
         selected_cols = self.view.selected_columns
+        if (len(selected_cols) == 0):
+            ErrorHandler.create_error("Выберите характеристики анализа.")
         df_transformed = self.transform_dataframe(data_frame, selected_cols)
 
         self.strategy.cluster(df_transformed, n_clusters)
+        #print(self.strategy.get_labels())
         self.results_controller.configure_results(df_transformed, self.strategy.get_labels(), self.strategy.get_centroids())
 
         self.results_controller.show_view()

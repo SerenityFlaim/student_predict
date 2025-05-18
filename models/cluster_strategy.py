@@ -33,7 +33,7 @@ class ClusterKMeansStrategy(ClusterStrategyInterface):
         return self.scaler.inverse_transform(self.cluster_centers_)
         
 class ClusterDBSCANStrategy(ClusterStrategyInterface):
-    def __init__(self, eps: float = 0.5, min_samples: int = 5):
+    def __init__(self, eps: float = 0.05, min_samples: int = 3):
         self.eps = eps
         self.min_samples = min_samples
         self.model = None

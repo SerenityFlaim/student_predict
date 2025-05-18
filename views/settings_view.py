@@ -7,6 +7,7 @@ class SettingsView(QDialog):
         self.ui = Ui_Settings()
         self.ui.setupUi(self)
         self.controller = None
+        self.setWindowTitle("Настройки Модели")
 
     def set_controller(self, controller):
         self.controller = controller

@@ -10,6 +10,7 @@ class ClusterResultsView(QDialog):
         self.ui = Ui_ClusterResultsWindow()
         self.ui.setupUi(self)
         self.controller = None
+        self.setWindowTitle("Результаты")
 
         self.scroll_content = QWidget()
         self.scroll_layout = QVBoxLayout(self.scroll_content)

@@ -12,6 +12,7 @@ class ClusterView(QDialog):
         self.ui.setupUi(self)
         self.controller = None
         self.selected_columns = []
+        self.setWindowTitle("Кластеризация")
         self.ui.metricFeatures_scrollArea.setWidgetResizable(True)
 
         #should be in ui_compiled?

@@ -7,6 +7,7 @@ class MenuView(QMainWindow):
         self.ui = Ui_MenuWindow()
         self.ui.setupUi(self)
         self.controller = None
+        self.setWindowTitle("Основное Меню")
 
     def set_controller(self, controller):
         self.controller = controller

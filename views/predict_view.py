@@ -7,6 +7,7 @@ class PredictView(QMainWindow):
             self.ui = Ui_PredictWindow()
             self.ui.setupUi(self)
             self.controller = None
+            self.setWindowTitle("Прогнозирование")
 
         def set_controller(self, controller):
             self.controller = controller
